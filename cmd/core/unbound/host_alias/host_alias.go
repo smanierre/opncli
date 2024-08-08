@@ -4,10 +4,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"opnsense-cli/internal/api"
-	"opnsense-cli/internal/client"
-	"opnsense-cli/internal/config"
 	"strings"
+
+	"github.com/smanierre/opncli/internal/api"
+	"github.com/smanierre/opncli/internal/client"
+	"github.com/smanierre/opncli/internal/config"
 
 	"github.com/spf13/cobra"
 )

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"opnsense-cli/cmd/core"
-	"opnsense-cli/internal/config"
+	"github.com/smanierre/opncli/cmd/core"
+	"github.com/smanierre/opncli/internal/config"
 
 	"github.com/spf13/cobra"
 )

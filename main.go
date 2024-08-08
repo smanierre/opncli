@@ -1,6 +1,6 @@
 package main
 
-import "opnsense-cli/cmd"
+import "github.com/smanierre/opncli/cmd"
 
 func main() {
 	cmd.Execute()

@@ -6,8 +6,9 @@ import (
 	"io"
 	"net/http"
 	"net/url"
-	"opnsense-cli/internal/config"
 	"strings"
+
+	"github.com/smanierre/opncli/internal/config"
 )
 
 type ApiClient struct {

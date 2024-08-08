@@ -1,8 +1,8 @@
 package unbound
 
 import (
-	"opnsense-cli/cmd/core/unbound/host_alias"
-	"opnsense-cli/cmd/core/unbound/host_overrides"
+	"github.com/smanierre/opncli/cmd/core/unbound/host_alias"
+	"github.com/smanierre/opncli/cmd/core/unbound/host_overrides"
 
 	"github.com/spf13/cobra"
 )

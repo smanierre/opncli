@@ -1,7 +1,7 @@
 package core
 
 import (
-	"opnsense-cli/cmd/core/unbound"
+	"github.com/smanierre/opncli/cmd/core/unbound"
 
 	"github.com/spf13/cobra"
 )
