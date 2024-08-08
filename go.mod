@@ -1,5 +1,4 @@
-module opnsense-cli
-
+module github.com/smanierre/opncli
 go 1.22.5
 
 require (
