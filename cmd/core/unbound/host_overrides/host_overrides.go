@@ -24,12 +24,11 @@ func init() {
 	addOverride.Flags().StringVar(&addDescription, "description", "", "Description for the host override")
 	addOverride.Flags().StringVar(&addDomain, "domain", "", "Domain for the host override")
 	addOverride.Flags().StringVar(&addHostname, "hostname", "", "Hostname for the override")
-	addOverride.Flags().StringVar(&addMx, "mx", "0", "Whether the record should be an MX record or not")
+	addOverride.Flags().StringVar(&addMx, "mx", "", "Whether the record should be an MX record or not")
 	addOverride.Flags().StringVar(&addMxprio, "mxprio", "", "Priority if an MX record")
 	addOverride.Flags().StringVar(&addRecordType, "record_type", "A", "Type of record")
 	addOverride.Flags().StringVar(&addIpAddress, "ip", "", "Ip address of host")
 	addOverride.MarkFlagRequired("domain")
-	addOverride.MarkFlagRequired("record_type")
 	addOverride.MarkFlagsRequiredTogether("mx", "mxprio")
 	addOverride.MarkFlagsRequiredTogether("ip", "hostname")
 }
@@ -67,6 +66,7 @@ var addOverride = &cobra.Command{
 			RecordType:  addRecordType,
 			IpAddress:   addIpAddress,
 		}
+		fmt.Println(override.String())
 		client := client.New(config.Cfg)
 		body, err := client.PerformRequest(http.MethodPost, "unbound", "settings", "addHostOverride", strings.NewReader(override.String()))
 		if err != nil {

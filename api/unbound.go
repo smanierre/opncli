@@ -74,16 +74,11 @@ type HostOverrideList struct {
 
 func (h HostOverrideList) String() string {
 	b := &bytes.Buffer{}
-	b.WriteString("[\n")
-	encoder := json.NewEncoder(b)
-	encoder.SetIndent("", "\t")
-	for _, v := range h.Records {
-		err := encoder.Encode(v)
-		if err != nil {
-			fmt.Printf("Error encoding HostOverride to JSON: %s", err.Error())
-		}
+	err := json.NewEncoder(b).Encode(h.Records)
+	if err != nil {
+		fmt.Printf("Error encoding HostOverrideList to JSON: %s\n", err.Error())
+		return ""
 	}
-	b.WriteString("]")
 	return b.String()
 }
 
