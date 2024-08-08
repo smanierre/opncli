@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/smanierre/opncli/internal/api"
+	"github.com/smanierre/opncli/api"
 	"github.com/smanierre/opncli/internal/client"
 	"github.com/smanierre/opncli/internal/config"
 
